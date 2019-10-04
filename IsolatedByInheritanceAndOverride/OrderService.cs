@@ -15,8 +15,6 @@ namespace IsolatedByInheritanceAndOverride
         public void SyncBookOrders()
         {
             var orders = this.GetOrders();
-
-            // only get orders of book
             var ordersOfBook = orders.Where(x => x.Type == "Book");
 
             var bookDao = GetBookDao();
